@@ -7,10 +7,9 @@ public class BuildScripts : MonoBehaviour
 {
     public static void BuildApk()
     {
-        Debug.Log("Kurva :");
         Debug.LogError(System.Environment.CurrentDirectory);
         var outdir = System.Environment.CurrentDirectory + "\\TestBuild";
-        var outputPath = Path.Combine(outdir, Application.productName + ".apk");
+        var outputPath = Path.Combine(outdir, Application.productName + ".exe");
         // Обработка папки
         if (!Directory.Exists(outdir)) Directory.CreateDirectory(outdir);
         if (File.Exists(outputPath)) File.Delete(outputPath);
